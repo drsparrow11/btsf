@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Character Files | Before the Signal Fades</title>
+    <meta
+      name="description"
+      content="Character archive files for Before the Signal Fades."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500&family=IBM+Plex+Mono:wght@300;400;500;600&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./characters.css" />
+  </head>
+  <body class="characters-page">
+    <div class="noise" aria-hidden="true"></div>
+    <div class="scanline" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <a class="brand" href="./index.html#archive" aria-label="Before the Signal Fades home">
+        <span class="brand-mark">BTSF</span>
+        <span>Before the Signal Fades</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="./index.html#archive">Archive</a>
+        <a href="./index.html#origin">Origin</a>
+        <a class="active-link" href="./characters.html">Characters</a>
+        <a href="./index.html#sparrow">Sparrow</a>
+        <a href="./index.html#echo">Echo</a>
+        <a href="./index.html#signals">Signals</a>
+      </nav>
+      <a class="sound-toggle" href="./index.html#archive">
+        <span class="signal-dot"></span>
+        Return to Archive
+      </a>
+    </header>
+
+    <main class="character-shell">
+      <section class="characters-hero" aria-labelledby="characters-title">
+        <div class="character-bg" aria-hidden="true"></div>
+
+        <div class="archive-kicker">
+          <span>BTSF Archive</span>
+          <span>Character File Index</span>
+        </div>
+
+        <div class="characters-layout">
+          <section class="featured-dossier" aria-live="polite">
+            <div class="dossier-frame">
+              <img id="featured-image" src="./assets/characters/sparrow.png" alt="Sparrow character file" />
+            </div>
+            <div class="dossier-copy">
+              <div>
+                <p class="terminal-line" id="featured-layer">HUMAN.EXE // PRIMARY ORIGIN</p>
+                <h1 id="characters-title">Sparrow</h1>
+              </div>
+              <dl class="character-meta">
+                <div>
+                  <dt>Role</dt>
+                  <dd id="featured-role">Human Signal Origin</dd>
+                </div>
+                <div>
+                  <dt>Status</dt>
+                  <dd id="featured-status">Active</dd>
+                </div>
+              </dl>
+              <p id="featured-summary">
+                A storyteller searching for meaning in the spaces between people.
+                Sparrow records connections, questions assumptions, and struggles
+                to understand himself as much as the world around him.
+              </p>
+            </div>
+          </section>
+
+          <aside class="archive-readout" aria-label="Character archive status">
+            <div class="readout-panel">
+              <span>Files indexed</span>
+              <strong>007</strong>
+            </div>
+            <div class="readout-panel">
+              <span>Recovered chapters</span>
+              <strong>003</strong>
+            </div>
+            <div class="readout-panel">
+              <span>Archive state</span>
+              <strong>Open</strong>
+            </div>
+            <div class="quote-panel">
+              <p>Every connection leaves an echo.</p>
+              <p>Every memory leaves a trace.</p>
+              <p>Every signal changes something.</p>
+            </div>
+          </aside>
+        </div>
+
+        <div class="character-roster" id="character-roster" aria-label="Character files"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Before the signal fades, remember.</span>
+      <span>Character archive v0.1</span>
+    </footer>
+
+    <script src="./characters.js"></script>
+  </body>
+</html>

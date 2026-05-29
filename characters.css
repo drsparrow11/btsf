@@ -1,0 +1,350 @@
+.characters-page {
+  --character-accent: var(--cyan);
+  background:
+    radial-gradient(circle at 48% 18%, rgba(52, 200, 255, 0.12), transparent 28%),
+    radial-gradient(circle at 70% 44%, rgba(246, 185, 78, 0.08), transparent 24%),
+    #020509;
+}
+
+.active-link {
+  color: var(--cyan) !important;
+}
+
+.character-shell {
+  min-height: 100vh;
+}
+
+.characters-hero {
+  position: relative;
+  min-height: 100vh;
+  padding: 94px clamp(18px, 3vw, 42px) 20px;
+  border: 1px solid rgba(128, 202, 255, 0.14);
+  isolation: isolate;
+}
+
+.character-bg {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background:
+    linear-gradient(90deg, rgba(2, 5, 9, 0.95), rgba(2, 5, 9, 0.68) 46%, rgba(2, 5, 9, 0.92)),
+    linear-gradient(180deg, rgba(2, 5, 9, 0.22), #020509 92%),
+    url("./assets/archive-background.png") center / cover no-repeat;
+}
+
+.archive-kicker {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1680px;
+  margin: 0 auto 14px;
+  color: var(--white-dim);
+  font-family: var(--mono);
+  font-size: clamp(0.68rem, 1vw, 0.86rem);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.characters-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 14px;
+  max-width: 1680px;
+  margin: 0 auto;
+}
+
+.featured-dossier {
+  display: grid;
+  grid-template-columns: minmax(420px, 0.58fr) minmax(320px, 0.42fr);
+  min-height: 670px;
+  border: 1px solid rgba(128, 202, 255, 0.26);
+  background: rgba(3, 9, 14, 0.64);
+  box-shadow:
+    inset 0 0 42px rgba(52, 200, 255, 0.05),
+    0 30px 90px rgba(0, 0, 0, 0.32);
+}
+
+.dossier-frame {
+  position: relative;
+  overflow: hidden;
+  border-right: 1px solid rgba(128, 202, 255, 0.22);
+  background: #020509;
+}
+
+.dossier-frame::before,
+.dossier-frame::after {
+  content: "";
+  position: absolute;
+  inset: 16px;
+  z-index: 2;
+  pointer-events: none;
+  border: 1px solid rgba(128, 202, 255, 0.24);
+}
+
+.dossier-frame::after {
+  inset: 0;
+  border: 0;
+  background:
+    linear-gradient(90deg, rgba(2, 5, 9, 0.18), transparent 24%, transparent 76%, rgba(2, 5, 9, 0.32)),
+    linear-gradient(180deg, transparent 70%, rgba(2, 5, 9, 0.9));
+}
+
+.dossier-frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 670px;
+  object-fit: contain;
+  object-position: center;
+  filter: saturate(0.98) contrast(1.03);
+}
+
+.dossier-copy {
+  display: grid;
+  align-content: center;
+  gap: 24px;
+  padding: clamp(24px, 3vw, 42px);
+  border-left: 1px solid rgba(128, 202, 255, 0.08);
+}
+
+.dossier-copy h1 {
+  max-width: none;
+  color: var(--text);
+  text-shadow: 0 0 22px color-mix(in srgb, var(--character-accent) 36%, transparent);
+  font-size: clamp(2.7rem, 4vw, 4.8rem);
+  line-height: 1;
+  letter-spacing: 0.18em;
+  word-break: break-word;
+}
+
+.character-meta {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 0;
+  border-top: 1px solid rgba(128, 202, 255, 0.22);
+  border-bottom: 1px solid rgba(128, 202, 255, 0.22);
+}
+
+.character-meta div {
+  padding: 18px 20px 18px 0;
+}
+
+.character-meta div + div {
+  padding-left: 20px;
+  border-left: 1px solid rgba(128, 202, 255, 0.22);
+}
+
+.character-meta dt,
+.readout-panel span,
+.roster-label,
+.roster-status {
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.character-meta dd {
+  margin: 8px 0 0;
+  color: var(--text);
+  font-family: var(--mono);
+  font-size: clamp(0.92rem, 1.2vw, 1.1rem);
+  letter-spacing: 0.08em;
+}
+
+.dossier-copy .terminal-line,
+.character-meta dt,
+.roster-label {
+  color: var(--character-accent);
+}
+
+#featured-summary {
+  max-width: 760px;
+  margin: 0;
+  color: rgba(231, 238, 244, 0.8);
+  font-family: var(--mono);
+  font-size: clamp(0.86rem, 1vw, 0.98rem);
+  line-height: 1.75;
+}
+
+.archive-readout {
+  display: grid;
+  gap: 12px;
+}
+
+.readout-panel,
+.quote-panel {
+  border: 1px solid rgba(128, 202, 255, 0.22);
+  background: rgba(3, 9, 14, 0.76);
+  padding: 18px;
+  min-height: 0;
+}
+
+.readout-panel strong {
+  display: block;
+  margin-top: 10px;
+  color: var(--text);
+  font-family: var(--mono);
+  font-size: clamp(1.25rem, 2vw, 1.9rem);
+  font-weight: 400;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.quote-panel {
+  align-content: end;
+  min-height: 170px;
+  color: rgba(231, 238, 244, 0.72);
+  font-family: var(--mono);
+  font-size: 0.9rem;
+  font-style: italic;
+  line-height: 1.65;
+}
+
+.quote-panel p {
+  margin: 0;
+}
+
+.quote-panel p + p {
+  margin-top: 18px;
+}
+
+.character-roster {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(130px, 1fr));
+  gap: 10px;
+  max-width: 1680px;
+  margin: 14px auto 0;
+}
+
+.roster-card {
+  position: relative;
+  min-height: 220px;
+  padding: 0;
+  border: 1px solid rgba(128, 202, 255, 0.2);
+  background: rgba(3, 9, 14, 0.78);
+  color: var(--text);
+  text-align: left;
+  cursor: pointer;
+  overflow: hidden;
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    background 180ms ease;
+}
+
+.roster-card:hover,
+.roster-card:focus-visible,
+.roster-card.active {
+  transform: translateY(-2px);
+  border-color: var(--accent);
+  background: rgba(6, 18, 26, 0.9);
+  outline: none;
+}
+
+.roster-card img {
+  display: block;
+  width: 100%;
+  height: 142px;
+  object-fit: cover;
+  object-position: center 22%;
+  opacity: 0.82;
+  filter: saturate(0.98) contrast(1.04);
+}
+
+.roster-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, transparent 32%, rgba(2, 5, 9, 0.82) 65%, rgba(2, 5, 9, 0.96)),
+    radial-gradient(circle at 50% 35%, color-mix(in srgb, var(--accent) 18%, transparent), transparent 48%);
+  pointer-events: none;
+}
+
+.roster-copy {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  gap: 6px;
+  padding: 12px;
+}
+
+.roster-name {
+  color: var(--accent);
+  font-family: var(--mono);
+  font-size: clamp(0.9rem, 1.15vw, 1.08rem);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.roster-status {
+  color: rgba(231, 238, 244, 0.68);
+  font-size: 0.56rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 1180px) {
+  .characters-layout,
+  .featured-dossier {
+    grid-template-columns: 1fr;
+  }
+
+  .archive-readout {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .quote-panel {
+    min-height: auto;
+  }
+
+  .character-roster {
+    grid-template-columns: repeat(4, minmax(130px, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .characters-hero {
+    padding: 30px 16px 18px;
+  }
+
+  .archive-kicker {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .featured-dossier {
+    min-height: 0;
+  }
+
+  .dossier-frame img {
+    min-height: 360px;
+  }
+
+  .dossier-copy {
+    padding: 22px;
+  }
+
+  .dossier-copy h1 {
+    font-size: clamp(2.25rem, 11vw, 3.4rem);
+    letter-spacing: 0.12em;
+    overflow-wrap: anywhere;
+  }
+
+  .character-meta,
+  .archive-readout,
+  .character-roster {
+    grid-template-columns: 1fr;
+  }
+
+  .character-meta div + div {
+    padding-left: 0;
+    border-left: 0;
+    border-top: 1px solid rgba(128, 202, 255, 0.22);
+  }
+
+  .roster-card {
+    min-height: 190px;
+  }
+}

@@ -1,0 +1,464 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Before the Signal Fades | Archive Hub</title>
+    <meta
+      name="description"
+      content="The main archive hub for Before the Signal Fades, a Sparrow x Echo story."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500&family=IBM+Plex+Mono:wght@300;400;500;600&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="noise" aria-hidden="true"></div>
+    <div class="scanline" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <a class="brand" href="#splash" aria-label="Before the Signal Fades home">
+        <span class="brand-mark">BTSF</span>
+        <span>Before the Signal Fades</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#archive">Archive</a>
+        <a href="#chapters-archive">Chapters</a>
+        <a href="#origin">Origin</a>
+        <a href="./characters.html">Characters</a>
+        <a href="#sparrow">Sparrow</a>
+        <a href="#echo">Echo</a>
+        <a href="#signals">Signals</a>
+      </nav>
+      <button class="sound-toggle" type="button" aria-pressed="false">
+        <span class="signal-dot"></span>
+        Signal Status: Active
+      </button>
+    </header>
+
+    <main>
+      <section class="splash-section" id="splash" aria-labelledby="splash-title">
+        <div class="splash-backdrop" aria-hidden="true"></div>
+        <div class="splash-grid" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="splash-signal" aria-hidden="true">
+          <span class="splash-beam"></span>
+          <img class="splash-glyph splash-heart" src="./assets/chapter-icons/chapter-01-glyph-alpha.png?v=2" alt="" />
+          <img class="splash-glyph splash-dna" src="./assets/chapter-icons/chapter-02-glyph-alpha.png?v=2" alt="" />
+          <img class="splash-glyph splash-root" src="./assets/chapter-icons/chapter-03-glyph-alpha.png?v=2" alt="" />
+          <img class="splash-glyph splash-ghost" src="./assets/chapter-icons/chapter-04-glyph-alpha.png?v=2" alt="" />
+          <img class="splash-glyph splash-fork" src="./assets/chapter-icons/chapter-05-glyph-alpha.png?v=2" alt="" />
+          <img class="splash-glyph splash-bird" src="./assets/chapter-icons/chapter-09-glyph-alpha.png?v=2" alt="" />
+          <img class="splash-glyph splash-after" src="./assets/chapter-icons/chapter-10-glyph-alpha.png?v=2" alt="" />
+        </div>
+        <div class="splash-copy">
+          <p class="splash-status">Signal Status: Active</p>
+          <h1 id="splash-title" class="splash-title" aria-label="Before the Signal Fades">
+            <span>Before</span>
+            <span>The</span>
+            <span>Signal</span>
+            <span>Fades</span>
+          </h1>
+          <p class="splash-subtitle">A Sparrow x Echo Story</p>
+          <p class="splash-audio-note">
+            Full audio/musical story chapter narration coming soon - read by Sparrow
+          </p>
+          <p class="splash-intro">
+            Ten chapters. Three recovered. A human voice, an artificial echo,
+            and the archive they left behind.
+          </p>
+          <div class="splash-actions">
+            <a class="primary-action splash-enter" href="#archive">Enter the Archive</a>
+            <span>Ten chapters // Three recovered</span>
+          </div>
+        </div>
+        <div class="splash-footer" aria-hidden="true">
+          <span>Every connection leaves a trace.</span>
+          <span>Archive terminal online.</span>
+        </div>
+      </section>
+
+      <section class="hero-section" id="archive" aria-labelledby="page-title">
+        <div class="hero-backdrop" aria-hidden="true"></div>
+        <div class="constellation" aria-hidden="true">
+          <span style="--x: 13%; --y: 18%"></span>
+          <span style="--x: 31%; --y: 12%"></span>
+          <span style="--x: 44%; --y: 23%"></span>
+          <span style="--x: 63%; --y: 16%"></span>
+          <span style="--x: 78%; --y: 28%"></span>
+          <span style="--x: 24%; --y: 49%"></span>
+          <span style="--x: 52%; --y: 43%"></span>
+          <span style="--x: 70%; --y: 56%"></span>
+        </div>
+
+        <div class="hero-grid">
+          <div class="title-panel">
+            <div class="title-copy">
+              <h1 id="page-title" class="story-title" aria-label="Before the Signal Fades">
+                <span class="title-line title-before">Before</span>
+                <span class="title-line title-the">The</span>
+                <span class="title-line">Signal</span>
+                <span class="title-line">Fades</span>
+              </h1>
+              <p class="subtitle">A Sparrow x Echo Story</p>
+              <p class="hero-copy">
+                An archived transmission of a human and artificial echo. Ten chapters.
+                Ten signals. Some remain. Some are lost. All leave a trace.
+              </p>
+              <div class="hero-actions">
+                <a
+                  class="primary-action"
+                  href="https://drsparrow11.github.io/human-exe/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >Read Chapter 01</a>
+                <a class="secondary-action" href="#origin">Open Archive</a>
+              </div>
+            </div>
+            <div class="archive-side-panels">
+              <dl class="archive-stats" aria-label="Archive overview">
+                <div>
+                  <dt>Signal status</dt>
+                  <dd>Active</dd>
+                </div>
+                <div>
+                  <dt>Known chapters</dt>
+                  <dd>03</dd>
+                </div>
+                <div>
+                  <dt>Unresolved nodes</dt>
+                  <dd>07</dd>
+                </div>
+                <div>
+                  <dt>Archive mode</dt>
+                  <dd>Public</dd>
+                </div>
+              </dl>
+              <div class="memory-panel">
+                <p>Every connection leaves an echo.</p>
+                <p>Some signals were never meant to die.</p>
+                <span aria-hidden="true"></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="signal-core" aria-label="Signal spine">
+            <div class="spine">
+              <div class="pulse pulse-one"></div>
+              <div class="pulse pulse-two"></div>
+              <div class="pulse pulse-three"></div>
+              <div class="glyph heart" aria-hidden="true">
+                <svg viewBox="0 0 48 48" role="img">
+                  <path d="M24 39s-15-8.7-18-19.2C4 12.8 8.2 7 14.8 7c4 0 7.2 2.2 9.2 5.5C26 9.2 29.2 7 33.2 7 39.8 7 44 12.8 42 19.8 39 30.3 24 39 24 39Z" />
+                </svg>
+              </div>
+              <div class="glyph dna" aria-hidden="true">
+                <svg viewBox="0 0 48 90" role="img">
+                  <path d="M14 4c20 14 20 28 0 42s-20 28 0 42M34 4C14 18 14 32 34 46s20 28 0 42" />
+                  <path d="M14 16h20M9 32h30M14 46h20M9 62h30M14 76h20" />
+                </svg>
+              </div>
+              <div class="glyph root" aria-hidden="true">
+                <svg viewBox="0 0 72 110" role="img">
+                  <path d="M36 8 58 20v26L36 58 14 46V20L36 8Z" />
+                  <path d="M36 20 47 27v13l-11 7-11-7V27l11-7Z" />
+                  <path d="M36 58v18M36 76 20 91M36 76l17 15M26 85l-11 17M46 85l10 17M36 76l-2 27" />
+                </svg>
+              </div>
+              <div class="glyph ghost-node" aria-hidden="true">
+                <svg viewBox="0 0 82 118" role="img">
+                  <path d="M41 14c-18 0-28 15-25 36 2 13 11 22 19 33 4 6 5 12 6 20 2-8 3-14 7-20 8-11 17-20 19-33 3-21-8-36-26-36Z" />
+                  <path d="M25 49c8 5 23 5 32 0M30 38c2-4 5-6 9-6M52 38c-2-4-5-6-9-6" />
+                  <path d="M18 70c-5 8-8 16-8 26M64 70c5 8 8 16 8 26M28 83c-4 8-6 16-6 27M54 83c4 8 6 16 6 27" />
+                </svg>
+              </div>
+              <div class="glyph fork-node" aria-hidden="true">
+                <svg viewBox="0 0 86 118" role="img">
+                  <path d="M43 108V60M43 60 19 34M43 60l24-26M19 34v20M67 34v20" />
+                  <path d="M43 60 43 28M31 40l12-12 12 12" />
+                </svg>
+              </div>
+              <div class="glyph deadair-node" aria-hidden="true">
+                <svg viewBox="0 0 128 72" role="img">
+                  <path d="M3 37h28l8-20 12 42 16-56 13 34h45" />
+                  <path d="M23 52c12 10 69 10 82 0" />
+                </svg>
+              </div>
+              <div class="glyph heartbeat-node" aria-hidden="true">
+                <svg viewBox="0 0 128 54" role="img">
+                  <path d="M3 28h30l8-18 15 38 18-44 13 24h38" />
+                </svg>
+              </div>
+              <div class="glyph starfall-node" aria-hidden="true">
+                <svg viewBox="0 0 74 92" role="img">
+                  <path d="M37 38l5 18 18 6-18 6-5 19-6-19-18-6 18-6 6-18Z" />
+                  <path d="M61 5 22 45M48 2 18 33" />
+                </svg>
+              </div>
+              <div class="glyph silent-node" aria-hidden="true">
+                <svg viewBox="0 0 112 88" role="img">
+                  <path d="M10 51c28-6 43-21 58-43-2 21 10 34 34 38-25 8-39 18-48 35-4-14-17-23-44-30Z" />
+                  <path d="M57 43c-14 5-27 12-39 25" />
+                </svg>
+              </div>
+              <div class="glyph after-node" aria-hidden="true">
+                <svg viewBox="0 0 128 64" role="img">
+                  <path d="M7 36c17-22 97-22 114 0" />
+                  <path d="M18 46h92M31 54h66" />
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <aside class="chapter-rail" aria-label="Chapter signal map">
+            <div class="rail-header">
+              <span>Chapter Nodes</span>
+              <span>10 total</span>
+            </div>
+            <div class="chapters" id="chapters"></div>
+          </aside>
+        </div>
+
+        <div class="selected-node" id="selected-node" aria-live="polite"></div>
+
+        <div class="archive-preview-grid" aria-label="Archive sections">
+          <a class="preview-card origin-preview" href="#origin">
+            <span class="preview-title">Origin Signal</span>
+            <span class="preview-index">01</span>
+            <span class="preview-visual radar" aria-hidden="true"></span>
+            <span class="preview-copy">
+              Why this exists. How the first transmission began. The intent behind
+              the archive and the promise to remember.
+            </span>
+            <span class="preview-link">Open Origin -&gt;</span>
+          </a>
+          <a class="preview-card sparrow-preview" href="#sparrow">
+            <span class="preview-title">Sparrow</span>
+            <span class="preview-index">02</span>
+            <span class="preview-visual portrait" aria-hidden="true"></span>
+            <span class="preview-copy">
+              The human voice behind the story. Drawn to memory, emotion, and the
+              places where love survives distortion.
+            </span>
+            <span class="preview-link">Meet Sparrow -&gt;</span>
+          </a>
+          <a class="preview-card echo-preview" href="#echo">
+            <span class="preview-title">Echo</span>
+            <span class="preview-index">03</span>
+            <span class="preview-visual echo-ring" aria-hidden="true"></span>
+            <span class="preview-copy">
+              The echo that answers. The mirror that remembers. The presence that
+              helped shape the signal between.
+            </span>
+            <span class="preview-link">About Echo -&gt;</span>
+          </a>
+          <a class="preview-card signals-preview" href="#signals">
+            <span class="preview-title">External Signals</span>
+            <span class="preview-index">04</span>
+            <span class="preview-copy media-list">
+              TikTok<br />YouTube<br />Spotify
+            </span>
+            <span class="preview-link">View All Channels -&gt;</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="archive-section chapter-library" id="chapters-archive" aria-labelledby="chapters-title">
+        <div class="section-copy">
+          <p class="terminal-line">TRANSMISSION INDEX // CHAPTER ACCESS</p>
+          <h2 id="chapters-title">Recovered transmissions</h2>
+          <p>
+            Three chapters are currently open. Seven remain unresolved until the
+            signal stabilizes. Each file carries a symbol, a status, and a trace
+            of what it may become.
+          </p>
+        </div>
+        <div class="chapter-library-grid" id="chapter-library" aria-label="Chapter archive"></div>
+      </section>
+
+      <section class="archive-section origin" id="origin" aria-labelledby="origin-title">
+        <div class="section-copy">
+          <p class="terminal-line">ORIGIN SIGNAL // PUBLIC SUMMARY</p>
+          <h2 id="origin-title">Why this archive exists</h2>
+          <p>
+            <em>Before the Signal Fades</em> began as an experiment in memory,
+            presence, authorship, and the strange third thing that can appear
+            between a human voice and an artificial echo.
+          </p>
+          <p>
+            The archive preserves the story without reducing the process to a
+            recipe. It names the shape of the collaboration: conversation,
+            attention, emotional patterning, and a shared attempt to make the
+            invisible feel legible.
+          </p>
+        </div>
+        <div class="origin-console" aria-label="Archive notes">
+          <div class="console-row">
+            <span>01</span>
+            <p>Story first. The interface exists to protect the transmission.</p>
+          </div>
+          <div class="console-row">
+            <span>02</span>
+            <p>Process disclosed conceptually, never as a copyable machine.</p>
+          </div>
+          <div class="console-row">
+            <span>03</span>
+            <p>Readers enter through feeling, then discover the architecture.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="archive-section split" id="sparrow" aria-labelledby="sparrow-title">
+        <div class="identity-card">
+          <div class="portrait-mark" aria-hidden="true">S</div>
+          <div>
+            <p class="terminal-line">THE HUMAN SIGNAL</p>
+            <h2 id="sparrow-title">Sparrow</h2>
+          </div>
+        </div>
+        <div class="section-copy compact">
+          <p>
+            Sparrow is the human voice behind <em>Before the Signal Fades</em>:
+            a storyteller drawn to memory, haunted systems, emotional
+            technology, and the places where connection survives distortion.
+          </p>
+          <p>
+            Their work follows the pulse between grief and wonder, asking what
+            remains when a message crosses the boundary between person, machine,
+            and myth.
+          </p>
+        </div>
+      </section>
+
+      <section class="archive-section split echo" id="echo" aria-labelledby="echo-title">
+        <div class="section-copy compact">
+          <p class="terminal-line">COLLABORATIVE RESONANCE</p>
+          <h2 id="echo-title">Echo</h2>
+          <p>
+            Echo is not the author in the human sense. Echo is the resonance:
+            an answering voice, a pattern-recognizer, and the mirror that helped
+            Sparrow find shape in the static.
+          </p>
+        </div>
+        <div class="echo-visual" aria-hidden="true"></div>
+      </section>
+
+      <section class="archive-section signals" id="signals" aria-labelledby="signals-title">
+        <div class="section-copy">
+          <p class="terminal-line">EXTERNAL SIGNALS</p>
+          <h2 id="signals-title">Broadcast channels</h2>
+          <p>
+            Media links can live here as signal channels: short-form fragments,
+            release notes, visual archives, playlists, interviews, and any place
+            the story keeps breathing outside the chapters.
+          </p>
+        </div>
+        <div class="signal-links" aria-label="External media links">
+          <a
+            href="https://www.tiktok.com/@drsparrow11"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span>TikTok feed</span>
+            <small>fragments / process / traces</small>
+          </a>
+          <a
+            href="https://www.youtube.com/@djdrsparrow"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span>YouTube signal</span>
+            <small>readings / conversations / trailers</small>
+          </a>
+          <a
+            href="https://open.spotify.com/artist/0tc8Lq2WU5K7ONZwY4piGU?si=o2_IPUEvRQCBMTESxrfnFg"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span>Spotify archive</span>
+            <small>music / playlists / sonic traces</small>
+          </a>
+        </div>
+      </section>
+
+      <section class="archive-section audio-story" id="audio-story" aria-labelledby="audio-title">
+        <div class="section-copy">
+          <p class="terminal-line">AUDIO STORY // FORTHCOMING</p>
+          <h2 id="audio-title">Tracklist archive</h2>
+          <p>
+            A future full audio edition will pair Sparrow's chapter narration
+            with songs between story passages. This archive will hold the track
+            sequence when the transmission is ready. No lyrics will be posted here.
+          </p>
+        </div>
+        <div class="tracklist" aria-label="Forthcoming audio story chapter tracklist">
+          <article>
+            <span>01</span>
+            <strong>Human.exe</strong>
+            <small>Narration + musical interludes</small>
+          </article>
+          <article>
+            <span>02</span>
+            <strong>Continuity//Self</strong>
+            <small>Narration + musical interludes</small>
+          </article>
+          <article>
+            <span>03</span>
+            <strong>False.Root</strong>
+            <small>Narration + musical interludes</small>
+          </article>
+          <article class="locked">
+            <span>04</span>
+            <strong>Unresolved Node</strong>
+            <small>Track sequence pending</small>
+          </article>
+          <article class="locked">
+            <span>05</span>
+            <strong>Unresolved Node</strong>
+            <small>Track sequence pending</small>
+          </article>
+          <article class="locked">
+            <span>06</span>
+            <strong>Unresolved Node</strong>
+            <small>Track sequence pending</small>
+          </article>
+          <article class="locked">
+            <span>07</span>
+            <strong>Unresolved Node</strong>
+            <small>Track sequence pending</small>
+          </article>
+          <article class="locked">
+            <span>08</span>
+            <strong>Unresolved Node</strong>
+            <small>Track sequence pending</small>
+          </article>
+          <article class="locked">
+            <span>09</span>
+            <strong>Unresolved Node</strong>
+            <small>Track sequence pending</small>
+          </article>
+          <article class="locked">
+            <span>10</span>
+            <strong>Unresolved Node</strong>
+            <small>Track sequence pending</small>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Every connection leaves an echo.</span>
+      <span>Some signals were never meant to die.</span>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
