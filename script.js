@@ -204,6 +204,23 @@ function renderChapterLibrary() {
 
 renderChapterLibrary();
 
+const siteHeader = document.querySelector(".site-header");
+const splashSection = document.querySelector("#splash");
+
+function updateHeaderVisibility() {
+  if (!siteHeader || !splashSection) return;
+
+  const onIntro =
+    window.scrollY < splashSection.offsetHeight * 0.58 &&
+    (!window.location.hash || window.location.hash === "#splash");
+
+  siteHeader.classList.toggle("is-hidden", onIntro);
+}
+
+updateHeaderVisibility();
+window.addEventListener("scroll", updateHeaderVisibility, { passive: true });
+window.addEventListener("hashchange", updateHeaderVisibility);
+
 chaptersEl.addEventListener("click", (event) => {
   const card = event.target.closest(".chapter-card");
   if (!card) return;
