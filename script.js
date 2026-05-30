@@ -204,22 +204,30 @@ function renderChapterLibrary() {
 
 renderChapterLibrary();
 
-const siteHeader = document.querySelector(".site-header");
-const splashSection = document.querySelector("#splash");
+const bootScreen = document.querySelector("#splash");
+const enterButton = document.querySelector("#enterButton");
 
-function updateHeaderVisibility() {
-  if (!siteHeader || !splashSection) return;
-
-  const onIntro =
-    window.scrollY < splashSection.offsetHeight * 0.58 &&
-    (!window.location.hash || window.location.hash === "#splash");
-
-  siteHeader.classList.toggle("is-hidden", onIntro);
+function closeBoot() {
+  if (!bootScreen) return;
+  bootScreen.classList.add("hidden");
+  if (!window.location.hash || window.location.hash === "#splash") {
+    window.history.replaceState(null, "", "#archive");
+  }
 }
 
-updateHeaderVisibility();
-window.addEventListener("scroll", updateHeaderVisibility, { passive: true });
-window.addEventListener("hashchange", updateHeaderVisibility);
+if (enterButton) {
+  enterButton.addEventListener("click", closeBoot);
+}
+
+if (bootScreen) {
+  bootScreen.addEventListener("click", (event) => {
+    if (event.target === bootScreen) closeBoot();
+  });
+}
+
+if (window.location.hash && window.location.hash !== "#splash") {
+  closeBoot();
+}
 
 chaptersEl.addEventListener("click", (event) => {
   const card = event.target.closest(".chapter-card");

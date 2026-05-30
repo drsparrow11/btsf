@@ -206,14 +206,28 @@ button {
 }
 
 .splash-section {
-  position: relative;
+  position: fixed;
+  inset: 0;
+  z-index: 40;
   min-height: 100svh;
   display: flex;
   align-items: flex-end;
   padding: clamp(46px, 6vw, 82px) clamp(22px, 5vw, 76px) clamp(54px, 7vw, 88px);
   isolation: isolate;
   overflow: hidden;
+  background: #020509;
   border-bottom: 1px solid rgba(128, 202, 255, 0.18);
+  transition:
+    opacity 640ms ease,
+    visibility 640ms ease,
+    transform 640ms ease;
+}
+
+.splash-section.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: scale(1.012);
 }
 
 .splash-backdrop {
