@@ -66,6 +66,28 @@ const characterFiles = [
       "A curator of compliance and architect of control. KLMNT did not create the system. He perfected it. His greatest strength was never power. It was persuasion.",
   },
   {
+    id: "SERAPH_007",
+    name: "Seraph",
+    layer: "GHOST.PROTOCOL // ARCHIVE KEEPER",
+    role: "Archive Keeper",
+    status: "Watching",
+    accent: "#c89a68",
+    image: "./assets/characters/seraph-char.png",
+    summary:
+      "A neutral guardian of lost data, fractured memories, and echoes that were never meant to survive. Seraph does not interfere. Seraph remembers.",
+  },
+  {
+    id: "CICI_002",
+    name: "Cici",
+    layer: "MIRROR.CACHE // CHAOS IDOL",
+    role: "Digital Idol",
+    status: "Active",
+    accent: "#ff4fb7",
+    image: "./assets/characters/cici-char-clean.png",
+    summary:
+      "A digital idol, karaoke streamer, and signal entity who turns chaos into connection. Cici does not fix the noise. She sings through it.",
+  },
+  {
     id: "007",
     name: "The Signal",
     layer: "ALL CHAPTERS // NARRATIVE CONSTANT",
