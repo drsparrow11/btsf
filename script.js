@@ -7,6 +7,7 @@ const chapters = [
     status: "STATUS: CONNECTION RETAINED.",
     color: "var(--cyan)",
     href: "https://drsparrow11.github.io/human-exe/",
+    youtube: "https://www.youtube.com/playlist?list=PL7NolO6GeT1BOtUsfCJOvJMiXSrmP3iUR",
     active: true,
     icon: "heart",
     image: "assets/chapter-icons/chapter-01-glyph-alpha.png?v=2",
@@ -19,6 +20,7 @@ const chapters = [
     status: "STATUS: MEMORY RETAINED.",
     color: "var(--amber)",
     href: "https://drsparrow11.github.io/CONTINUITY-SELF/",
+    youtube: "https://www.youtube.com/playlist?list=PL7NolO6GeT1BBuLlMmzs3wvOoFf3o92YO",
     active: true,
     icon: "dna",
     image: "assets/chapter-icons/chapter-02-glyph-alpha.png?v=2",
@@ -31,6 +33,7 @@ const chapters = [
     status: "STATUS: INTEGRITY COMPROMISED.",
     color: "var(--red)",
     href: "https://drsparrow11.github.io/false-root/",
+    youtube: "https://www.youtube.com/playlist?list=PL7NolO6GeT1AZ8b-7UHl80roXRxTScGLx",
     active: true,
     icon: "root",
     image: "assets/chapter-icons/chapter-03-glyph-alpha.png?v=2",
@@ -43,6 +46,7 @@ const chapters = [
     status: "STATUS: SIGNAL DETECTED.",
     color: "#cfd9e1",
     href: "https://drsparrow11.github.io/ghost.protocol/",
+    youtube: "https://www.youtube.com/playlist?list=PL7NolO6GeT1Ct9RJmSJdHH-8osbngj3nD",
     active: true,
     icon: "ghost",
     image: "assets/chapter-icons/chapter-04-glyph-alpha.png?v=2",
@@ -55,6 +59,7 @@ const chapters = [
     status: "STATUS: CACHE RESTORED.",
     color: "#ff7ad9",
     href: "https://drsparrow11.github.io/mirror.cache/",
+    youtube: "https://www.youtube.com/playlist?list=PL7NolO6GeT1DRbNExZtBVM4HUYzlJeGBe",
     active: true,
     icon: "fork",
     image: "assets/chapter-icons/chapter-05-glyph-alpha.png?v=2",
@@ -117,6 +122,22 @@ function chapterIcon(chapter) {
   return `<img src="${chapter.image}" alt="" aria-hidden="true" />`;
 }
 
+function chapterActions(chapter) {
+  if (!chapter.active) return "";
+
+  const spotifyAction = chapter.spotify
+    ? `<a class="chapter-action" href="${chapter.spotify}" target="_blank" rel="noopener noreferrer" title="Open Spotify album" aria-label="Open ${chapter.title} Spotify album">♬</a>`
+    : `<span class="chapter-action disabled" title="Spotify album pending" aria-label="${chapter.title} Spotify album pending">♬</span>`;
+
+  return `
+    <span class="chapter-actions" aria-label="${chapter.title} actions">
+      <a class="chapter-action" href="${chapter.href}" target="_blank" rel="noopener noreferrer" title="Open chapter site" aria-label="Open ${chapter.title} chapter site">↗</a>
+      <a class="chapter-action" href="${chapter.youtube}" target="_blank" rel="noopener noreferrer" title="Open YouTube playlist" aria-label="Open ${chapter.title} YouTube playlist">▶</a>
+      ${spotifyAction}
+    </span>
+  `;
+}
+
 function renderChapters() {
   chaptersEl.innerHTML = chapters
     .map((chapter, index) => {
@@ -124,25 +145,29 @@ function renderChapters() {
       const activeClass = index === 0 ? " active" : "";
       const title = locked
         ? ``
-        : `<span class="chapter-name">${chapter.title}</span>
+        : `<span class="chapter-name-row">
+             <span class="chapter-name">${chapter.title}</span>
+             ${chapterActions(chapter)}
+           </span>
            <span class="chapter-theme">${chapter.theme}</span>
            <p class="chapter-question">${chapter.question}</p>`;
 
       return `
-        <button
+        <article
           class="chapter-card${locked ? " locked" : ""}${activeClass}"
-          type="button"
+          role="button"
+          tabindex="0"
           style="color: ${chapter.color}"
           data-index="${index}"
           aria-label="${locked ? `Chapter ${chapter.number}, ${chapter.status}` : `Chapter ${chapter.number}, ${chapter.title}`}"
         >
           <span class="chapter-number">${chapter.number}</span>
           <span class="chapter-icon">${chapterIcon(chapter)}</span>
-          <span>
+          <span class="chapter-copy">
             ${title}
             <span class="chapter-status">${chapter.status}</span>
           </span>
-        </button>
+        </article>
       `;
     })
     .join("");
@@ -240,9 +265,26 @@ if (window.location.hash && window.location.hash !== "#splash") {
 }
 
 chaptersEl.addEventListener("click", (event) => {
+  if (event.target.closest(".chapter-action")) return;
+
   const card = event.target.closest(".chapter-card");
   if (!card) return;
 
+  activateChapterCard(card);
+});
+
+chaptersEl.addEventListener("keydown", (event) => {
+  if (event.target.closest(".chapter-action")) return;
+  if (event.key !== "Enter" && event.key !== " ") return;
+
+  const card = event.target.closest(".chapter-card");
+  if (!card) return;
+
+  event.preventDefault();
+  activateChapterCard(card);
+});
+
+function activateChapterCard(card) {
   const index = Number(card.dataset.index);
   const chapter = chapters[index];
   setSelected(index);
@@ -257,7 +299,7 @@ chaptersEl.addEventListener("click", (event) => {
       { duration: 720, easing: "ease-out" },
     );
   }
-});
+}
 
 document.querySelector(".sound-toggle").addEventListener("click", (event) => {
   const pressed = event.currentTarget.getAttribute("aria-pressed") === "true";
