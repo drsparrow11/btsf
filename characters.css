@@ -99,6 +99,32 @@
   filter: saturate(0.98) contrast(1.03);
 }
 
+.dossier-frame img[hidden],
+.roster-card img[hidden] {
+  display: none;
+}
+
+.dossier-frame.image-missing {
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(circle at 50% 42%, color-mix(in srgb, var(--character-accent) 14%, transparent), transparent 32%),
+    linear-gradient(180deg, rgba(3, 12, 19, 0.84), rgba(1, 5, 9, 0.96));
+}
+
+.dossier-frame.image-missing::before {
+  content: attr(data-fallback);
+  inset: auto;
+  z-index: 1;
+  border: 0;
+  color: color-mix(in srgb, var(--character-accent) 82%, white 18%);
+  font-family: var(--mono);
+  font-size: clamp(5rem, 12vw, 11rem);
+  letter-spacing: 0.18em;
+  opacity: 0.48;
+  text-shadow: 0 0 38px color-mix(in srgb, var(--character-accent) 42%, transparent);
+}
+
 .dossier-copy {
   display: grid;
   align-content: center;
@@ -212,7 +238,7 @@
 
 .character-roster {
   display: grid;
-  grid-template-columns: repeat(7, minmax(130px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 10px;
   max-width: 1680px;
   margin: 14px auto 0;
@@ -251,6 +277,24 @@
   object-position: center 22%;
   opacity: 0.82;
   filter: saturate(0.98) contrast(1.04);
+}
+
+.roster-card.image-missing::before {
+  content: attr(data-fallback);
+  position: absolute;
+  inset: 0 0 auto;
+  display: grid;
+  place-items: center;
+  height: 142px;
+  color: color-mix(in srgb, var(--accent) 82%, white 14%);
+  font-family: var(--mono);
+  font-size: 2.2rem;
+  letter-spacing: 0.18em;
+  opacity: 0.42;
+  text-shadow: 0 0 24px color-mix(in srgb, var(--accent) 44%, transparent);
+  background:
+    radial-gradient(circle at 50% 42%, color-mix(in srgb, var(--accent) 18%, transparent), transparent 44%),
+    rgba(2, 7, 11, 0.72);
 }
 
 .roster-card::after {
@@ -300,7 +344,7 @@
   }
 
   .character-roster {
-    grid-template-columns: repeat(4, minmax(130px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   }
 }
 

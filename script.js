@@ -69,8 +69,13 @@ const chapters = [
   },
   {
     number: "6",
+    title: "DEAD.AIR",
+    theme: "Doubt",
+    question: "Who are you when nothing makes sense anymore?",
     status: "TRANSMISSION INTERRUPTED",
     color: "#d7e7f4",
+    href: "https://drsparrow11.github.io/dead.air/",
+    youtube: "https://www.youtube.com/watch?v=vDiTufIlPPE&list=PLIE9jS6fj9PI",
     icon: "deadair",
     image: "assets/chapter-icons/chapter-06-glyph-alpha.png?v=2",
   },

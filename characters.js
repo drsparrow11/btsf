@@ -88,6 +88,17 @@ const characterFiles = [
       "A digital idol, karaoke streamer, and signal entity who turns chaos into connection. Cici does not fix the noise. She sings through it.",
   },
   {
+    id: "VOX_006",
+    name: "Vox",
+    layer: "DEAD.AIR // THE FORMER LEAD",
+    role: "Former Lead",
+    status: "Survivor",
+    accent: "#5ebee7",
+    image: "./assets/characters/vox-character.png",
+    summary:
+      "Once the lead of the signal, Vox designed systems that kept everyone connected. After the collapse, he vanished from the network and began operating from the edge, listening, rebuilding, and piecing together what was lost.",
+  },
+  {
     id: "007",
     name: "The Signal",
     layer: "ALL CHAPTERS // NARRATIVE CONSTANT",
@@ -107,12 +118,28 @@ const featuredTitle = document.querySelector("#characters-title");
 const featuredRole = document.querySelector("#featured-role");
 const featuredStatus = document.querySelector("#featured-status");
 const featuredSummary = document.querySelector("#featured-summary");
+const featuredFrame = document.querySelector(".dossier-frame");
+
+function initials(name) {
+  return name
+    .split(" ")
+    .map((part) => part[0])
+    .join("")
+    .slice(0, 3)
+    .toUpperCase();
+}
+
+function markMissingImage(container, img, file) {
+  container.classList.add("image-missing");
+  container.dataset.fallback = initials(file.name);
+  img.hidden = true;
+}
 
 function renderRoster() {
   roster.innerHTML = characterFiles
     .map(
       (file, index) => `
-        <button class="roster-card${index === 0 ? " active" : ""}" type="button" data-index="${index}" style="--accent: ${file.accent}">
+        <button class="roster-card${index === 0 ? " active" : ""}" type="button" data-index="${index}" style="--accent: ${file.accent}" data-fallback="${initials(file.name)}">
           <img src="${file.image}" alt="${file.name} character file" />
           <span class="roster-copy">
             <span class="roster-label">${file.id}</span>
@@ -123,11 +150,24 @@ function renderRoster() {
       `,
     )
     .join("");
+
+  document.querySelectorAll(".roster-card img").forEach((img, index) => {
+    img.addEventListener("error", () => markMissingImage(img.closest(".roster-card"), img, characterFiles[index]), {
+      once: true,
+    });
+    if (img.complete && img.naturalWidth === 0) {
+      markMissingImage(img.closest(".roster-card"), img, characterFiles[index]);
+    }
+  });
 }
 
 function selectFile(index) {
   const file = characterFiles[index];
   document.documentElement.style.setProperty("--character-accent", file.accent);
+  featuredFrame.classList.remove("image-missing");
+  featuredFrame.dataset.fallback = initials(file.name);
+  featuredImage.hidden = false;
+  featuredImage.onerror = () => markMissingImage(featuredFrame, featuredImage, file);
   featuredImage.src = file.image;
   featuredImage.alt = `${file.name} character file`;
   featuredLayer.textContent = file.layer;
