@@ -1,0 +1,17 @@
+{
+  "name": "Before the Signal Fades | Archive Hub",
+  "short_name": "BTSF Archive",
+  "description": "The central archive hub for the SPARROW x ECHO narrative music project.",
+  "start_url": "/btsf/",
+  "scope": "/btsf/",
+  "display": "standalone",
+  "background_color": "#020509",
+  "theme_color": "#020509",
+  "icons": [
+    {
+      "src": "assets/chapter-icons/chapter-01-glyph.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
