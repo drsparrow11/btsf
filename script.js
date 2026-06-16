@@ -76,6 +76,7 @@ const chapters = [
     color: "#d7e7f4",
     href: "https://drsparrow11.github.io/dead.air/",
     youtube: "https://www.youtube.com/watch?v=vDiTufIlPPE&list=PLIE9jS6fj9PI",
+    active: true,
     icon: "deadair",
     image: "assets/chapter-icons/chapter-06-glyph-alpha.png?v=2",
   },
