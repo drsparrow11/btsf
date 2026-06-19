@@ -167,8 +167,19 @@ button {
 }
 
 .nav-links a:hover,
-.nav-links a:focus-visible {
+.nav-links a:focus-visible,
+.entry-nav-link {
   color: var(--cyan);
+}
+
+.entry-nav-link {
+  text-shadow: 0 0 16px rgba(52, 200, 255, 0.5);
+}
+
+.entry-nav-link::before {
+  content: ">";
+  margin-right: 0.45em;
+  color: var(--teal);
 }
 
 .nav-links a:hover::after,
@@ -356,6 +367,10 @@ button {
 
 .splash-enter {
   min-width: 204px;
+}
+
+.splash-start {
+  min-width: 218px;
 }
 
 .splash-footer {
@@ -672,18 +687,23 @@ h2 {
 }
 
 .newcomer-panel {
-  width: min(100%, 470px);
-  margin-top: 24px;
-  padding: 16px 18px;
-  border: 1px solid rgba(128, 202, 255, 0.24);
-  border-left-color: rgba(52, 200, 255, 0.7);
+  position: relative;
+  width: min(100%, 540px);
+  margin-top: 28px;
+  padding: 22px 24px;
+  border: 1px solid rgba(128, 202, 255, 0.34);
+  border-left: 2px solid rgba(52, 200, 255, 0.9);
   background:
-    linear-gradient(90deg, rgba(52, 200, 255, 0.08), transparent 80%),
-    rgba(3, 9, 14, 0.68);
-  box-shadow: inset 0 0 34px rgba(52, 200, 255, 0.04);
+    radial-gradient(circle at 92% 18%, rgba(49, 230, 210, 0.12), transparent 30%),
+    linear-gradient(90deg, rgba(52, 200, 255, 0.12), transparent 82%),
+    rgba(3, 9, 14, 0.8);
+  box-shadow:
+    inset 0 0 44px rgba(52, 200, 255, 0.07),
+    0 0 42px rgba(52, 200, 255, 0.08);
 }
 
 .newcomer-panel strong,
+.recommended-entry,
 .newcomer-actions a,
 .start-rule,
 .signal-choice span,
@@ -696,24 +716,33 @@ h2 {
 .newcomer-panel strong {
   display: block;
   color: var(--cyan);
-  font-size: 0.72rem;
-  letter-spacing: 0.18em;
+  font-size: 0.82rem;
+  letter-spacing: 0.2em;
+}
+
+.recommended-entry {
+  display: block;
+  margin-top: 10px;
+  color: rgba(246, 185, 78, 0.94);
+  font-size: 0.64rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
 }
 
 .newcomer-panel p {
-  max-width: 390px;
-  margin: 10px 0 0;
+  max-width: 450px;
+  margin: 14px 0 0;
   color: rgba(231, 238, 244, 0.82);
   font-family: var(--mono);
-  font-size: 0.72rem;
-  line-height: 1.55;
+  font-size: 0.78rem;
+  line-height: 1.65;
 }
 
 .newcomer-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-  margin-top: 14px;
+  margin-top: 18px;
 }
 
 .newcomer-actions a {
@@ -723,8 +752,21 @@ h2 {
   letter-spacing: 0.14em;
 }
 
+.newcomer-actions .newcomer-primary {
+  min-height: 34px;
+  padding: 9px 13px;
+  border: 1px solid rgba(52, 200, 255, 0.54);
+  background: linear-gradient(90deg, rgba(52, 200, 255, 0.22), rgba(49, 230, 210, 0.12));
+  color: var(--text);
+  box-shadow: 0 0 18px rgba(52, 200, 255, 0.12);
+}
+
 .newcomer-actions a::after {
   content: " ->";
+}
+
+.newcomer-actions .newcomer-primary::after {
+  content: "";
 }
 
 .signal-core {
