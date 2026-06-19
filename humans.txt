@@ -1,5 +1,6 @@
 Project: Before the Signal Fades
 Site: https://drsparrow11.github.io/btsf/
+Start Here: https://drsparrow11.github.io/btsf/start.html
 Creator: SPARROW x ECHO
 
 Before the Signal Fades is a ten-chapter narrative music archive about connection, memory, truth, absence, reflection, doubt, purpose, mortality, acceptance, and transcendence.
