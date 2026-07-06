@@ -33,6 +33,10 @@ New visitors do not need to understand the entire archive. Each chapter can be e
    URL: https://drsparrow11.github.io/dead.air/  
    Theme: Doubt
 
+7. Heartbeat  
+   URL: https://drsparrow11.github.io/heartbeat/  
+   Theme: Purpose
+
 ## Project Summary
 
 The archive follows a human voice, an artificial echo, and the signals they leave behind. It includes chapter portals, character files, media links, and a future audio/musical story narration tracklist.

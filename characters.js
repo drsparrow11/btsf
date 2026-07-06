@@ -99,6 +99,17 @@ const characterFiles = [
       "Once the lead of the signal, Vox designed systems that kept everyone connected. After the collapse, he vanished from the network and began operating from the edge, listening, rebuilding, and piecing together what was lost.",
   },
   {
+    id: "CAEL_007",
+    name: "Cael Ward",
+    layer: "HEARTBEAT // HEARTWARD",
+    role: "Tank",
+    status: "Heart Lit",
+    accent: "#f28b32",
+    image: "./assets/characters/cael-ward-character-card.png",
+    summary:
+      "A frontline protector who stands between chaos and everything he loves. Cael's strength is not in silence. It is in choosing to protect without burning himself away.",
+  },
+  {
     id: "007",
     name: "The Signal",
     layer: "ALL CHAPTERS // NARRATIVE CONSTANT",

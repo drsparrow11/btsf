@@ -146,6 +146,11 @@ button {
   gap: clamp(14px, 2.8vw, 34px);
   color: var(--muted);
   font-size: 0.68rem;
+  scrollbar-width: none;
+}
+
+.nav-links::-webkit-scrollbar {
+  display: none;
 }
 
 .nav-links a {
@@ -391,6 +396,7 @@ button {
 .hero-section {
   position: relative;
   min-height: 100vh;
+  scroll-margin-top: 96px;
   padding: 92px clamp(22px, 3.2vw, 46px) 18px;
   isolation: isolate;
   border: 1px solid rgba(128, 202, 255, 0.12);
@@ -2114,7 +2120,7 @@ h2 {
   }
 
   .hero-section {
-    padding: 42px 16px 28px;
+    padding: 130px 16px 28px;
     overflow: hidden;
   }
 
