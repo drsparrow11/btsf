@@ -110,6 +110,28 @@ const characterFiles = [
       "A frontline protector who stands between chaos and everything he loves. Cael's strength is not in silence. It is in choosing to protect without burning himself away.",
   },
   {
+    id: "CADENCE_008",
+    name: "Cadence",
+    layer: "STARFALL // MUSICIAN",
+    role: "Musician",
+    status: "Wish Retained",
+    accent: "#f6a93a",
+    image: "./assets/characters/cadence.png",
+    summary:
+      "A musician of unfinished songs and returning memories. Cadence carries the notes written for those who stayed, turning remembrance into something that can keep moving.",
+  },
+  {
+    id: "LYRA_008",
+    name: "Lyra",
+    layer: "STARFALL // CONSTELLATION",
+    role: "Constellation",
+    status: "Open Sky",
+    accent: "#9dccff",
+    image: "./assets/characters/lyra.png",
+    summary:
+      "A listening constellation where music becomes a place to land. Lyra turns every note into a star, every star into a song, and every song into a way home.",
+  },
+  {
     id: "007",
     name: "The Signal",
     layer: "ALL CHAPTERS // NARRATIVE CONSTANT",
