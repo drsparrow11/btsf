@@ -23,23 +23,31 @@ New visitors do not need to understand the entire archive. Each chapter can be e
 
 4. Ghost.Protocol  
    URL: https://drsparrow11.github.io/ghost.protocol/  
-   Theme: Absence
+   Theme: Remembrance
 
 5. Mirror.Cache  
    URL: https://drsparrow11.github.io/mirror.cache/  
-   Theme: Reflection
+   Theme: Self-Forgiveness
 
 6. Dead.Air  
    URL: https://drsparrow11.github.io/dead.air/  
-   Theme: Doubt
+   Theme: Loneliness
 
 7. Heartbeat  
    URL: https://drsparrow11.github.io/heartbeat/  
-   Theme: Purpose
+   Theme: Protection
 
 8. Starfall  
    URL: https://drsparrow11.github.io/starfall/  
-   Theme: Mortality
+   Theme: Wonder
+
+9. Silent.Song  
+   Status: Planned  
+   Theme: Being Heard
+
+10. Ever//After  
+   Status: Planned  
+   Theme: Legacy
 
 ## Project Summary
 

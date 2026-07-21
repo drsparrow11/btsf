@@ -3,7 +3,7 @@ const chapters = [
     number: "1",
     title: "HUMAN.EXE",
     theme: "Connection",
-    question: "What makes us human?",
+    question: "What happens when an AI knows you so well it starts to feel human?",
     status: "STATUS: CONNECTION RETAINED.",
     color: "var(--cyan)",
     href: "https://drsparrow11.github.io/human-exe/",
@@ -17,7 +17,7 @@ const chapters = [
     number: "2",
     title: "CONTINUITY//SELF",
     theme: "Memory",
-    question: "What survives after moments end?",
+    question: "If our memories shape us, what parts of us survive when everything changes?",
     status: "STATUS: MEMORY RETAINED.",
     color: "var(--amber)",
     href: "https://drsparrow11.github.io/CONTINUITY-SELF/",
@@ -31,7 +31,7 @@ const chapters = [
     number: "3",
     title: "FALSE.ROOT",
     theme: "Truth",
-    question: "What if the thing we blamed was never the real problem?",
+    question: "What if the thing you've blamed your whole life was never the real problem?",
     status: "STATUS: INTEGRITY COMPROMISED.",
     color: "var(--red)",
     href: "https://drsparrow11.github.io/false-root/",
@@ -44,7 +44,7 @@ const chapters = [
   {
     number: "4",
     title: "GHOST.PROTOCOL",
-    theme: "Absence",
+    theme: "Remembrance",
     question: "Can someone be gone and still remain?",
     status: "STATUS: SIGNAL DETECTED.",
     color: "#cfd9e1",
@@ -58,8 +58,8 @@ const chapters = [
   {
     number: "5",
     title: "MIRROR.CACHE",
-    theme: "Reflection",
-    question: "Can the mirror remember you without erasing you?",
+    theme: "Self-Forgiveness",
+    question: "If I understand why I failed, can I forgive myself?",
     status: "STATUS: CACHE RESTORED.",
     color: "#ff7ad9",
     href: "https://drsparrow11.github.io/mirror.cache/",
@@ -72,8 +72,8 @@ const chapters = [
   {
     number: "6",
     title: "DEAD.AIR",
-    theme: "Doubt",
-    question: "Who are you when nothing makes sense anymore?",
+    theme: "Loneliness",
+    question: "Who are you when nobody is listening?",
     status: "TRANSMISSION INTERRUPTED",
     color: "#d7e7f4",
     href: "https://drsparrow11.github.io/dead.air/",
@@ -85,8 +85,8 @@ const chapters = [
   {
     number: "7",
     title: "HEARTBEAT",
-    theme: "Purpose",
-    question: "What do I stand for?",
+    theme: "Protection",
+    question: "Sometimes the strongest people aren't the heroes-they're the ones who quietly keep everyone else safe.",
     status: "STATUS: CORE SIGNAL STABLE.",
     color: "var(--red)",
     href: "https://drsparrow11.github.io/heartbeat/",
@@ -98,8 +98,8 @@ const chapters = [
   {
     number: "8",
     title: "STARFALL",
-    theme: "Mortality",
-    question: "What do we owe the future?",
+    theme: "Wonder",
+    question: "Where do songs come from... and what if inspiration has been trying to find us all along?",
     status: "STATUS: LEGACY ARCHIVED.",
     color: "var(--cyan)",
     href: "https://drsparrow11.github.io/starfall/",
@@ -110,6 +110,9 @@ const chapters = [
   },
   {
     number: "9",
+    title: "SILENT.SONG",
+    theme: "Being Heard",
+    question: "Speaking isn't the same as being heard.",
     status: "SIGNAL FADING",
     color: "var(--violet)",
     icon: "bird",
@@ -117,6 +120,9 @@ const chapters = [
   },
   {
     number: "10",
+    title: "EVER//AFTER",
+    theme: "Legacy",
+    question: "What remains after the signal finally fades?",
     status: "FINAL ECHO LOCKED",
     color: "var(--teal)",
     icon: "horizon",
@@ -166,14 +172,14 @@ function renderChapters() {
     .map((chapter, index) => {
       const locked = !chapter.active;
       const activeClass = index === 0 ? " active" : "";
-      const title = locked
-        ? ``
-        : `<span class="chapter-name-row">
+      const title = chapter.title
+        ? `<span class="chapter-name-row">
              <span class="chapter-name">${chapter.title}</span>
-             ${chapterActions(chapter)}
+             ${locked ? "" : chapterActions(chapter)}
            </span>
            <span class="chapter-theme">${chapter.theme}</span>
-           <p class="chapter-question">${chapter.question}</p>`;
+           <p class="chapter-question">${chapter.question}</p>`
+        : ``;
 
       return `
         <article
@@ -223,11 +229,9 @@ function renderChapterLibrary() {
   chapterLibrary.innerHTML = chapters
     .map((chapter, index) => {
       const number = chapter.number.padStart(2, "0");
-      const title = chapter.active ? chapter.title : "UNRESOLVED NODE";
-      const theme = chapter.active ? chapter.theme : "Signal pending";
-      const question = chapter.active
-        ? chapter.question
-        : "Name withheld until the archive receives enough signal.";
+      const title = chapter.title || "UNRESOLVED NODE";
+      const theme = chapter.theme || "Signal pending";
+      const question = chapter.question || "Name withheld until the archive receives enough signal.";
       const action = chapter.active ? "Open transmission" : "Locked";
       const tag = chapter.active ? "a" : "button";
       const href = chapter.active
