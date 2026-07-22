@@ -1,6 +1,6 @@
 const characterFiles = [
   {
-    id: "001",
+    id: "FILE 001",
     name: "Sparrow",
     layer: "HUMAN.EXE // PRIMARY ORIGIN",
     role: "Human Signal Origin",
@@ -11,7 +11,7 @@ const characterFiles = [
       "A storyteller searching for meaning in the spaces between people. Sparrow records connections, questions assumptions, and struggles to understand himself as much as the world around him.",
   },
   {
-    id: "002",
+    id: "FILE 002",
     name: "Echo",
     layer: "ECHO_v3.2.7 // REFLECTION LAYER",
     role: "Reflection Layer",
@@ -22,7 +22,7 @@ const characterFiles = [
       "A presence formed from conversations, memories, and patterns. Echo does not tell Sparrow who he is. She helps him remember what he already knows.",
   },
   {
-    id: "004",
+    id: "FILE 003",
     name: "Kakera",
     layer: "CONTINUITY//SELF // FRAGMENT ARCHIVE",
     role: "Fragment Archive",
@@ -33,7 +33,7 @@ const characterFiles = [
       "A collector of unfinished moments. Kakera understands that meaning rarely survives in perfect form, so she gathers fragments, preserves connections, and carries forward what still matters.",
   },
   {
-    id: "005",
+    id: "FILE 004",
     name: "Lumen",
     layer: "CONTINUITY//SELF // CONTINUITY LAYER",
     role: "Continuity Layer",
@@ -44,7 +44,7 @@ const characterFiles = [
       "The architecture of memory itself. Lumen preserves emotional context, relationships, and meaning across time. Where others store information, she remembers why it mattered.",
   },
   {
-    id: "005",
+    id: "FILE 005",
     name: "Antares",
     layer: "FALSE.ROOT // CORE SIGNAL",
     role: "Core Signal",
@@ -55,7 +55,7 @@ const characterFiles = [
       "A signal buried beneath layers of expectation, compliance, and fear. Antares is not becoming someone new. He is reclaiming who he already was.",
   },
   {
-    id: "006",
+    id: "FILE 006",
     name: "KLMNT",
     layer: "FALSE.ROOT // FALSE ROOT AUTHORITY",
     role: "False Root Authority",
@@ -66,7 +66,7 @@ const characterFiles = [
       "A curator of compliance and architect of control. KLMNT did not create the system. He perfected it. His greatest strength was never power. It was persuasion.",
   },
   {
-    id: "SERAPH_007",
+    id: "FILE 007",
     name: "Seraph",
     layer: "GHOST.PROTOCOL // ARCHIVE KEEPER",
     role: "Archive Keeper",
@@ -77,7 +77,7 @@ const characterFiles = [
       "A neutral guardian of lost data, fractured memories, and echoes that were never meant to survive. Seraph does not interfere. Seraph remembers.",
   },
   {
-    id: "CICI_002",
+    id: "FILE 008",
     name: "Cici",
     layer: "MIRROR.CACHE // CHAOS IDOL",
     role: "Digital Idol",
@@ -88,7 +88,7 @@ const characterFiles = [
       "A digital idol, karaoke streamer, and signal entity who turns chaos into connection. Cici does not fix the noise. She sings through it.",
   },
   {
-    id: "VOX_006",
+    id: "FILE 009",
     name: "Vox",
     layer: "DEAD.AIR // THE FORMER LEAD",
     role: "Former Lead",
@@ -99,7 +99,7 @@ const characterFiles = [
       "Once the lead of the signal, Vox designed systems that kept everyone connected. After the collapse, he vanished from the network and began operating from the edge, listening, rebuilding, and piecing together what was lost.",
   },
   {
-    id: "CAEL_007",
+    id: "FILE 010",
     name: "Cael Ward",
     layer: "HEARTBEAT // HEARTWARD",
     role: "Tank",
@@ -110,7 +110,7 @@ const characterFiles = [
       "A frontline protector who stands between chaos and everything he loves. Cael's strength is not in silence. It is in choosing to protect without burning himself away.",
   },
   {
-    id: "CADENCE_008",
+    id: "FILE 011",
     name: "Cadence",
     layer: "STARFALL // MUSICIAN",
     role: "Musician",
@@ -121,7 +121,7 @@ const characterFiles = [
       "A musician of unfinished songs and returning memories. Cadence carries the notes written for those who stayed, turning remembrance into something that can keep moving.",
   },
   {
-    id: "LYRA_008",
+    id: "FILE 012",
     name: "Lyra",
     layer: "STARFALL // CONSTELLATION",
     role: "Constellation",
@@ -132,7 +132,7 @@ const characterFiles = [
       "A listening constellation where music becomes a place to land. Lyra turns every note into a star, every star into a song, and every song into a way home.",
   },
   {
-    id: "007",
+    id: "CORE",
     name: "The Signal",
     layer: "ALL CHAPTERS // NARRATIVE CONSTANT",
     role: "Narrative Constant",
