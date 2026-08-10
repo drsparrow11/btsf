@@ -132,6 +132,17 @@ const characterFiles = [
       "A listening constellation where music becomes a place to land. Lyra turns every note into a star, every star into a song, and every song into a way home.",
   },
   {
+    id: "FILE 013",
+    name: "Angel",
+    layer: "SILENT.SONG // THE SONG WAS NEVER GONE",
+    role: "Being Heard",
+    status: "Song Recovered",
+    accent: "#d98aa8",
+    image: "./assets/characters/angel-character-card.png",
+    summary:
+      "Angel has always had a song inside her. Silent.Song is her remembering that silence was survival, not truth, and that being heard begins with hearing herself.",
+  },
+  {
     id: "CORE",
     name: "The Signal",
     layer: "ALL CHAPTERS // NARRATIVE CONSTANT",
