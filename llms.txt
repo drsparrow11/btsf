@@ -46,7 +46,7 @@ New visitors do not need to understand the entire archive. Each chapter can be e
    Theme: Being Heard
 
 10. Ever//After  
-   Status: Planned  
+   URL: https://drsparrow11.github.io/ever-after/
    Theme: Legacy
 
 ## Project Summary
